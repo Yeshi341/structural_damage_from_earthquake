@@ -1,3 +1,6 @@
+# data stored here
+data/extracted/eq_data
+
 # OS generated files #
 ######################
 .DS_Store
