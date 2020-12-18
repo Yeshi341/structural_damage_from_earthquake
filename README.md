@@ -78,7 +78,7 @@ Although the location of the building is important, I want to see how the models
 
 ## For More Information
 
-Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](......).
+Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](Capstone Presentation Outline.pdf).
 
 For any additional questions, feel free to email @ **boutlhamu@gmail.com**
 
@@ -91,5 +91,6 @@ To navigate the repository better here is a table of its contents:
 * **pre_model** - Contains data loading notebook, data cleaning notebooks and EDA notebooks
 * **src/nb_modules** - Contain .py files
 * **.gitignore** - list of hidden files to ignore in the versioning processs
+* **Capstone Presentation Outline.pdf** - Presentation slide deck pdf 
 * **README.md** - Readme file contains summary of the project process
 * **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
