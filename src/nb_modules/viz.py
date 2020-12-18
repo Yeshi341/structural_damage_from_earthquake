@@ -20,10 +20,10 @@ def floor_type(df):
     # Set figure legend 
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building damage on floor type');
+    plt.savefig('./images/Building_damage_on_floor_type');
     
 def foundation_type(df):
-      '''
+    '''
     This function takes the dataframe as an argument
     Returns a categorical plot and saves the figure
     '''
@@ -41,10 +41,10 @@ def foundation_type(df):
     # Set figure legend and savefig
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building damage on foundation type.png');
+    plt.savefig('./images/Building_damage_on_foundation_type.png');
 
 def roof_type(df):
-      '''
+    '''
     This function takes the dataframe as an argument
     Returns a categorical plot and saves the figure
     '''
@@ -61,7 +61,7 @@ def roof_type(df):
     # Set figure legend and savefig
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building damage on Roof type.png');
+    plt.savefig('./images/Building_damage_on_Roof_type.png');
     
 def target_var(df):
     '''
@@ -80,7 +80,7 @@ def target_var(df):
     plt.title('Target variable distribution showing Class Imbalance')
     
     #saving fig
-    plt.savefig('./images/target variable class imbalance.png');
+    plt.savefig('./images/target_variable_class_imbalance.png');
     
 def target_var_resample(df):
     '''
@@ -99,5 +99,5 @@ def target_var_resample(df):
     plt.title('Target variable distribution')
     
     #saving fig
-    plt.savefig('./images/target variable Resampled.png')
+    plt.savefig('./images/target_variable_Resampled.png')
 

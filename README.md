@@ -27,25 +27,25 @@ The **building damage** dataset has features that inform about the damage faced 
 Superstructure is the structual part of a building found above the foundation or basement. The type of materials used or found in the superstructure can be very telling about the kind of damage a building may have from an earthquake. 
 
 In the dataset, we find that about 80% of the buildings have a build composition of mud, mortar and stone, with others. Timber is the next heavily used material in building superstructures.
-![img](./images/Distribution of building superstructure composition.png)
+![img](./images/Distribution_of_building_superstructure_composition.png)
 
 Building damage severity is highest for structures with a a floor type of timber/ bamboo mud. This group also had the most number of buildings with minor damages by a lot. The best fairing buildings had a floor type composition of RCC/RB/RBC, where damages were the least but with still some building that were severely compromised.
 
 RCC/RB/RBC all refer to **Reinforced Cement Concrete** where the composite materials are made of cement concrete and steet rebars. In construction, the steet rebars at tensile strength and ductility to conteract the rigidity of the concrete.
-![img](./images/Building damage on floor type.png)
+![img](./images/Building_damage_on_floor_type.png)
 
 Looking at the foundation type of the building, we can clearly see that some form of concrete material foundation type faced the least damages. Buildings with mud mortar-stone/Brick foundations were heavily damaged during the earthquake.
-![img](./images/Building damage on foundation type.png)
+![img](./images/Building_damage_on_foundation_type.png)
 
 Similarly, here for bamboo/timber-light roofing buildings the damage was highest. RCC roofed buildings were either severly damaged or barly damaged at all. 
-![img](./images/Building damage on Roof type.png)
+![img](./images/Building_damage_on_roof_type.png)
 
 ## Methods
 The data was cleaned and explored. All the categorical nominal features or variables were converted to dummy variables and those original variables were dropped from the final dataset. The target variable suffered from a class imbalance issue which was stabilized by performing a combination of upsampling and downsampling.
-![img](./images/target variable class imabalance.png)
+![img](./images/target_variable_class_imabalance.png)
 
 Resampled target variable is shown in the image below
-![img](./images/target variable Resampled.png)
+![img](./images/target_variable_Resampled.png)
 
 The training set (used to train the models on) was then standardized using a MinMax scaler.  The initial logistic regression models suffered from underfitting implying that those models were unable to export all the information from the data, i.e, model was highly biased. A complex model like the decision tree did better.
 
@@ -76,6 +76,12 @@ For any additional questions, feel free to email @ **boutlhamu@gmail.com**
 
 To navigate the repository better here is a table of its contents:
 
-
-
+* **images** - Visualizations saved in the EDA and Modeling process
+* **models** - Notebooks used to run model trial iterations
+* **pre_model** - Contains data loading notebook, data cleaning notebooks and EDA notebooks
+* **src/nb_modules** - Contain .py files
+* **.gitignore** - list of hidden files to ignore in the versioning processs
+* **README.md** - Readme file contains summary of the project process
+* **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
+*
 
