@@ -91,6 +91,6 @@ To navigate the repository better here is a table of its contents:
 * **pre_model** - Contains data loading notebook, data cleaning notebooks and EDA notebooks
 * **src/nb_modules** - Contain .py files
 * **.gitignore** - list of hidden files to ignore in the versioning processs
-* **Capstone Presentation Outline.pdf** - Presentation slide deck pdf 
+* **capstone_presentation.pdf** - Presentation slide deck pdf 
 * **README.md** - Readme file contains summary of the project process
 * **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
