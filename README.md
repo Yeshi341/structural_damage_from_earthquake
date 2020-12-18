@@ -42,7 +42,7 @@ Similarly, here for bamboo/timber-light roofing buildings the damage was highest
 
 ## Methods
 The data was cleaned and explored. All the categorical nominal features or variables were converted to dummy variables and those original variables were dropped from the final dataset. The target variable suffered from a class imbalance issue which was stabilized by performing a combination of upsampling and downsampling.
-![img](./images/target_variable_class_imabalance.png)
+![img](./images/target_variable_class_imbalance.png)
 
 Resampled target variable is shown in the image below
 ![img](./images/target_variable_Resampled.png)
