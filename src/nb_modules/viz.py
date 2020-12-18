@@ -20,7 +20,7 @@ def floor_type(df):
     # Set figure legend 
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_floor_type');
+    plt.savefig('./images/Building_damage_on_floor_type', bbox_inches = "tight");
     
 def foundation_type(df):
     '''
@@ -41,7 +41,7 @@ def foundation_type(df):
     # Set figure legend and savefig
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_foundation_type.png');
+    plt.savefig('./images/Building_damage_on_foundation_type.png', bbox_inches = "tight");
 
 def roof_type(df):
     '''
@@ -61,7 +61,7 @@ def roof_type(df):
     # Set figure legend and savefig
     plt.legend(title='Damage Severity ', loc='lower right', 
            labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_Roof_type.png');
+    plt.savefig('./images/Building_damage_on_Roof_type.png', bbox_inches = "tight");
     
 def target_var(df):
     '''
@@ -80,7 +80,7 @@ def target_var(df):
     plt.title('Target variable distribution showing Class Imbalance')
     
     #saving fig
-    plt.savefig('./images/target_variable_class_imbalance.png');
+    plt.savefig('./images/target_variable_class_imbalance.png', bbox_inches = "tight");
     
 def target_var_resample(df):
     '''
@@ -99,5 +99,5 @@ def target_var_resample(df):
     plt.title('Target variable distribution')
     
     #saving fig
-    plt.savefig('./images/target_variable_Resampled.png')
+    plt.savefig('./images/target_variable_Resampled.png', bbox_inches = "tight")
 

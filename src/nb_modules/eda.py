@@ -15,7 +15,8 @@ def dict_maker(feat_list, df):
     print(building_count)
     x=list(building_count.keys())
     y=list(building_count.values())
-    plt.figure(figsize=(8,5))
+    
+    plt.figure(figsize=(10,5))
     plt.barh(x, y);
     return
     
