@@ -78,7 +78,7 @@ Although the location of the building is important, I want to see how the models
 
 ## For More Information
 
-Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here]('capstone_presentation.pdf').
+Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](presentation_eq_building_damage.pdf).
 
 For any additional questions, feel free to email @ **boutlhamu@gmail.com**
 
