@@ -27,24 +27,30 @@ The **building damage** dataset has features that inform about the damage faced 
 Superstructure is the structual part of a building found above the foundation or basement. The type of materials used or found in the superstructure can be very telling about the kind of damage a building may have from an earthquake. 
 
 In the dataset, we find that about 80% of the buildings have a build composition of mud, mortar and stone, with others. Timber is the next heavily used material in building superstructures.
+
 ![img](./images/Distribution_of_building_superstructure_composition.png)
 
 Building damage severity is highest for structures with a a floor type of timber/ bamboo mud. This group also had the most number of buildings with minor damages by a lot. The best fairing buildings had a floor type composition of RCC/RB/RBC, where damages were the least but with still some building that were severely compromised.
 
 RCC/RB/RBC all refer to **Reinforced Cement Concrete** where the composite materials are made of cement concrete and steet rebars. In construction, the steet rebars at tensile strength and ductility to conteract the rigidity of the concrete.
+
 ![img](./images/Building_damage_on_floor_type.png)
 
 Looking at the foundation type of the building, we can clearly see that some form of concrete material foundation type faced the least damages. Buildings with mud mortar-stone/Brick foundations were heavily damaged during the earthquake.
+
 ![img](./images/Building_damage_on_foundation_type.png)
 
 Similarly, here for bamboo/timber-light roofing buildings the damage was highest. RCC roofed buildings were either severly damaged or barly damaged at all. 
-![img](./images/Building_damage_on_roof_type.png)
+
+![img](./images/Building_damage_on_Roof_type.png)
 
 ## Methods
 The data was cleaned and explored. All the categorical nominal features or variables were converted to dummy variables and those original variables were dropped from the final dataset. The target variable suffered from a class imbalance issue which was stabilized by performing a combination of upsampling and downsampling.
+
 ![img](./images/target_variable_class_imbalance.png)
 
 Resampled target variable is shown in the image below
+
 ![img](./images/target_variable_Resampled.png)
 
 The training set (used to train the models on) was then standardized using a MinMax scaler.  The initial logistic regression models suffered from underfitting implying that those models were unable to export all the information from the data, i.e, model was highly biased. A complex model like the decision tree did better.
@@ -53,9 +59,13 @@ The training set (used to train the models on) was then standardized using a Min
 
 The Decision Tree Model performed best so far. The model complexity was able to correct any instances of underfitting and tuning the hyperparameters managed overfitting issues.
 The model has a Recall Score of 0.70 and an F1 Score of 0.71. Below is an image of the Confusion Matrix.
+
 ![img](./images/confusion_matrix_final.png)
+
 The True positive rates for each class is above average. There is yet room to improve since the model does not do a very good job of predicting class label 2.
+
 ![img](./images/Decision_tree_important_features.png)
+
 The image above shows the top 15 features that the decision tree deemed important.
 
 The buildings that faired best from the earthquake damage were structure that following modern construction methods of using materials like Cement Concrete and steel rebars.
