@@ -1,6 +1,7 @@
 # data stored here
 data/extracted/eq_data
 data/pickles
+data/geo_data
 
 # OS generated files #
 ######################
