@@ -2,8 +2,9 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 
-def dict_maker(feat_list, df):
+def dict_to_fig(feat_list, df, title, ylabel, figname):
     '''
     Takes in a list of feature names
     Returns a dictionary of features with its value_counts as values
@@ -11,13 +12,24 @@ def dict_maker(feat_list, df):
     '''
     building_count= {}
     for use in feat_list:
-        building_count[use]=df[use].value_counts(ascending=True)[1]
-    print(building_count)
+        building_count[use]=round((df[use].value_counts(normalize=True, ascending=True)[1])*100,2)
+    # print(building_count)
     x=list(building_count.keys())
     y=list(building_count.values())
     
-    plt.figure(figsize=(10,5))
-    plt.barh(x, y);
+    fig, ax = plt.subplots(figsize=(11,7))
+    ax.barh(x, y)
+    
+    # Set axes ticks
+    ax.xaxis.set_major_formatter(ticker.PercentFormatter())
+    ax.tick_params(axis='both', labelsize=15);
+    
+    # Set axes labels and title
+    ax.set_xlabel('Percentage of Buildings', size = 15)
+    ax.set_ylabel(ylabel, size=15)
+    ax.set_title(title, size= 17, pad=17)
+    
+    fig.savefig('./images/{}.png'.format(figname), bbox_inches = "tight");
     return
     
 
