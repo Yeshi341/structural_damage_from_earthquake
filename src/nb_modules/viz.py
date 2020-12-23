@@ -1,67 +1,76 @@
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
+import matplotlib.ticker as ticker
 import seaborn as sns
 
 def floor_type(df):
     '''
     This function takes the dataframe as an argument
-    Returns a categorical plot and saves the figure
+    Returns a count plot and saves the figure
     '''
-    sns.catplot(y="other_floor_type", hue="target",
-                data=df, kind="count",
-            height=5, aspect=1.25,legend=False,
-               order=df['other_floor_type'].value_counts().index)
+    fig, ax = plt.subplots(figsize=(9,7))
 
+    sns.countplot(ax= ax, y="other_floor_type", hue="target",
+                data=df, order=df['other_floor_type'].value_counts().index)
+
+    # Set axes ticks
+    ax.xaxis.set_major_formatter(ticker.PercentFormatter(xmax = 762106))
+    ax.tick_params(axis='both',labelsize=15)
+    
     # Set axes labels and title
-    plt.xlabel('Number of Buildings')
-    plt.ylabel("Floor Type")
-    plt.title('Comparison on building damage based on floor type')
-
-    # Set figure legend 
-    plt.legend(title='Damage Severity ', loc='lower right', 
-           labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_floor_type', bbox_inches = "tight");
+    ax.set_xlabel('Percentage of Buildings', size = 15, labelpad=10)
+    ax.set_ylabel("Floor Type", size = 15)
+    ax.set_title('Comparison on building damage based on floor type', size = 17, pad =18)
+    
+    # Set axes legend and save figure
+    ax.legend(title='Damage Severity ', loc='lower right', labels=['Severe', 'Major', 'Minor'], fontsize = 15)
+    fig.savefig('./images/Building_damage_on_floor_type.png', bbox_inches = "tight");
     
 def foundation_type(df):
     '''
     This function takes the dataframe as an argument
     Returns a categorical plot and saves the figure
     '''
+    # Set figure, axes and draw
+    fig, ax = plt.subplots(figsize= (9,7))
+    sns.countplot(ax= ax,y="foundation_type", hue="target",
+                data=df, order=df['foundation_type'].value_counts().index)
     
-    sns.catplot(y="foundation_type", hue="target",
-                data=df, kind="count",
-            height=5, aspect=1.25,legend=False,
-               order=df['foundation_type'].value_counts().index)
-
+    # Set axes ticks
+    ax.xaxis.set_major_formatter(ticker.PercentFormatter(xmax=762106))
+    ax.tick_params(axis='both', labelsize=15)
+    
     # Set axes labels and title
-    plt.xlabel('Number of Buildings')
-    plt.ylabel("Foundation Type")
-    plt.title('Comparison on building damage based on Foundation Type')
+    ax.set_xlabel('Number of Buildings', size=15, labelpad = 10)
+    ax.set_ylabel("Foundation Type", size = 15)
+    ax.set_title('Comparison on building damage based on Foundation Type', size= 17, pad =18)
 
-    # Set figure legend and savefig
-    plt.legend(title='Damage Severity ', loc='lower right', 
-           labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_foundation_type.png', bbox_inches = "tight");
+    # Set axes legend and savefig
+    ax.legend(title='Damage Severity ', loc='lower right', labels=['Severe', 'Major', 'Minor'], fontsize = 15)
+    fig.savefig('./images/Building_damage_on_foundation_type.png', bbox_inches = "tight");
 
 def roof_type(df):
     '''
     This function takes the dataframe as an argument
     Returns a categorical plot and saves the figure
     '''
-    sns.catplot(y="roof_type", hue="target",
-                data=df, kind="count",
-            height=5, aspect=1.35,legend=False,
-               order=df['roof_type'].value_counts().index)
+    # Set figure, axes and draw
+    fig, ax = plt.subplots(figsize=(9,7))
+    sns.countplot(ax=ax,y="roof_type", hue="target",
+                data=df,order=df['roof_type'].value_counts().index)
 
+    # Set axes ticks
+    ax.xaxis.set_major_formatter(ticker.PercentFormatter(xmax = 762106))
+    ax.tick_params(axis='both', labelsize=15)
+    
     # Set axes labels and title
-    plt.xlabel('Number of Buildings')
-    plt.ylabel("Roof Type")
-    plt.title('Comparison on building damage based on Roof Type')
+    ax.set_xlabel('Percentage of Buildings', size = 15, labelpad=10)
+    ax.set_ylabel("Roof Type", size = 15)
+    ax.set_title('Comparison on building damage based on Roof Type', size = 17, pad =18)
 
     # Set figure legend and savefig
-    plt.legend(title='Damage Severity ', loc='lower right', 
-           labels=['Severe', 'Major', 'Minor'])
-    plt.savefig('./images/Building_damage_on_Roof_type.png', bbox_inches = "tight");
+    ax.legend(title='Damage Severity ', loc='lower right', labels=['Severe', 'Major', 'Minor'], fontsize=15)
+    fig.savefig('./images/Building_damage_on_Roof_type.png', bbox_inches = "tight");
     
 def target_var(df):
     '''
