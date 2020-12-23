@@ -88,6 +88,8 @@ The buildings that faired best from the earthquake damage were structure that fo
 Going forward I would like to try out some more complex models such as SVM, Random Forrest and other Ensemble methods. 
 Although the location of the building is important, I want to see how the models behave if the building locations were removed.
 
+## Recommendations
+-- add recommendation text here from notebook
 
 ## For More Information
 
