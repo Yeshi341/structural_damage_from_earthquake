@@ -12,6 +12,19 @@ There is a common saying among geologists that earthquakes don’t kill people, 
 The models resulting here can be used by policy makers in Nepal to not only identify buildings but also tag vulnerable communities so that funds can be appropriated efficiently and the information can be used in crisis management planning, for an earthquake event .
 The results of this project may also be useful to developers in Nepal, in building appraisals.
 
+## Repository Structure
+
+To navigate the repository better here is a table of its contents:
+
+* **images** - Visualizations saved in the EDA and Modeling process
+* **models** - Notebooks used to run model trial iterations
+* **pre_model** - Contains data loading notebook, data cleaning notebooks and EDA notebooks
+* **src/nb_modules** - Contain .py files
+* **.gitignore** - list of hidden files to ignore in the versioning processs
+* **capstone_presentation.pdf** - Presentation slide deck pdf 
+* **README.md** - Readme file contains summary of the project process
+* **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
+
 ## Data
 
 After the 2015 Nepal Earthquake, survey data was collected on the damaged buildings. The data loaded comes from the 2015 Nepal Earthquake Data [portal](https://eq2015.npc.gov.np/#/download). The data contains information on 762106 buildings. Three datasets are used where each row in the dataset informs about a building.
@@ -80,17 +93,5 @@ Although the location of the building is important, I want to see how the models
 
 Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](presentation_eq_building_damage.pdf).
 
-For any additional questions, feel free to email @ **boutlhamu@gmail.com**
+For any additional questions, feel free to email me at **boutlhamu@gmail.com**
 
-## Repository Structure
-
-To navigate the repository better here is a table of its contents:
-
-* **images** - Visualizations saved in the EDA and Modeling process
-* **models** - Notebooks used to run model trial iterations
-* **pre_model** - Contains data loading notebook, data cleaning notebooks and EDA notebooks
-* **src/nb_modules** - Contain .py files
-* **.gitignore** - list of hidden files to ignore in the versioning processs
-* **capstone_presentation.pdf** - Presentation slide deck pdf 
-* **README.md** - Readme file contains summary of the project process
-* **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
