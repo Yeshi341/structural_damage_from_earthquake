@@ -41,7 +41,7 @@ def foundation_type(df):
     ax.tick_params(axis='both', labelsize=15)
     
     # Set axes labels and title
-    ax.set_xlabel('Number of Buildings', size=15, labelpad = 10)
+    ax.set_xlabel('Percentage of Buildings', size=15, labelpad = 10)
     ax.set_ylabel("Foundation Type", size = 15)
     ax.set_title('Comparison on building damage based on Foundation Type', size= 17, pad =18)
 
@@ -68,11 +68,11 @@ def roof_type(df):
     ax.set_ylabel("Roof Type", size = 15)
     ax.set_title('Comparison on building damage based on Roof Type', size = 17, pad =18)
 
-    # Set figure legend and savefig
+    # Set figure legend and save fig
     ax.legend(title='Damage Severity ', loc='lower right', labels=['Severe', 'Major', 'Minor'], fontsize=15)
     fig.savefig('./images/Building_damage_on_Roof_type.png', bbox_inches = "tight");
     
-def target_var(df):
+def target_var(df, title, figname, xmax):
     '''
     Function takes in a datframe
     Returns a barchart of the target variable. 
@@ -81,32 +81,39 @@ def target_var(df):
     print("Proportion of type of Building damage")
     print(round(df['target'].value_counts(normalize=True)*100,2))
     
-    # Categorical plot of target variable
-    sns.catplot(x="target", kind="count", palette="ch:.25", data=df)
+    # Set up figure, axes and draw the plot
+    fig, ax = plt.subplots(figsize=(8,6))
+    sns.countplot(x="target", palette="ch:.25", data=df)
     
-    #setting axes label and title
-    plt.ylabel('Number of buildings')
-    plt.title('Target variable distribution showing Class Imbalance')
+    #Set axes ticks
+    ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax = xmax))
+    ax.tick_params(axis='both', labelsize= 15)
     
-    #saving fig
-    plt.savefig('./images/target_variable_class_imbalance.png', bbox_inches = "tight");
+    #set axes label and title
+    ax.set_ylabel('Percentage of buildings', size=15)
+    ax.set_xlabel('Degree of Building Damage', size = 15)
+    ax.set_title(title, size=17, pad= 10)
     
-def target_var_resample(df):
-    '''
-    Function takes in a datframe
-    Returns a barchart of the target variable. 
-    The label name of the target variable is 'target'
-    '''
-    print("Proportion of type of Building damage")
-    print(round(df['target'].value_counts(normalize=True)*100,2))
+    #save fig
+    fig.savefig('./images/{}.png'.format(figname), bbox_inches = "tight");
     
-    # Categorical plot of target variable
-    sns.catplot(x="target", kind="count", palette="ch:.25", data=df)
+# def target_var_resample(df):
+#     '''
+#     Function takes in a datframe
+#     Returns a barchart of the target variable. 
+#     The label name of the target variable is 'target'
+#     '''
+#     print("Proportion of type of Building damage")
+#     print(round(df['target'].value_counts(normalize=True)*100,2))
     
-    #setting axes label and title
-    plt.ylabel('Number of buildings')
-    plt.title('Target variable distribution')
+#     # Set up figure, axes and draw plot
+#     fig,
+#     sns.catplot(x="target", kind="count", palette="ch:.25", data=df)
     
-    #saving fig
-    plt.savefig('./images/target_variable_Resampled.png', bbox_inches = "tight")
+#     #setting axes label and title
+#     plt.ylabel('Number of buildings')
+#     plt.title('Target variable distribution')
+    
+#     #saving fig
+#     plt.savefig('./images/target_variable_Resampled.png', bbox_inches = "tight")
 
