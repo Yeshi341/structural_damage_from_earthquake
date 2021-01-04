@@ -13,6 +13,7 @@ To navigate the repository better here is a table of its contents:
 * **capstone_presentation.pdf** - Presentation slide deck pdf 
 * **README.md** - Readme file contains summary of the project process
 * **predicting_building_damage.ipynb** - Final notebook showing a walkthrough of the data science process for this project.
+* **data_dict.md** - Data dictionary of features in the datasets.
 
 ## Overview
 
@@ -89,7 +90,11 @@ Going forward I would like to try out some more complex models such as SVM, Rand
 Although the location of the building is important, I want to see how the models behave if the building locations were removed.
 
 ## Recommendations
--- add recommendation text here from notebook
+Based on the Analysis, a strong building that may not face much damage from an earthquake, in one that is built using construction materials that consist of metal and concrete compositions. It is recommended that houses that are made of mud/mortar/stone, mud/stone/brick and older building be upgraded, to prevent loss of life from building damage during an earthquake disaster.
+
+The vulnerable buildings may be built the way they are, because they belong to lower income households. In order to assist these households financially, the government may also have to provide financial support.
+
+The model is only 68% accurate. Investigators may use these models in addition to other tools they already have, or they may have to add an additional confirmation step in their assessment of a building vulnerability to earthquake damage.
 
 ## For More Information
 
