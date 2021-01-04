@@ -27,7 +27,7 @@ The results of this project may also be useful to developers in Nepal, in buildi
 
 ## Data
 
-After the 2015 Nepal Earthquake, survey data was collected on the damaged buildings. The data loaded comes from the 2015 Nepal Earthquake Data [portal](https://eq2015.npc.gov.np/#/download). The data contains information on 762106 buildings. Three datasets are used where each row in the dataset informs about a building. Data information on each of the features/ variables on the three datasets used can be found in the data dictionary [file](structural_damage_from_earthquake/data_dict.md).
+After the 2015 Nepal Earthquake, survey data was collected on the damaged buildings. The data loaded comes from the 2015 Nepal Earthquake Data [portal](https://eq2015.npc.gov.np/#/download). The data contains information on 762106 buildings. Three datasets are used where each row in the dataset informs about a building. Data information on each of the features/ variables on the three datasets used can be found in the data dictionary [file](data_dict.md).
 
 The **building use** dataset has features that inform where a building is located, the legal ownership status of the building, how many families lived in the building and whether the building had a secondary use aside ffrom this ownership status. This dataset had 17 features.
 
