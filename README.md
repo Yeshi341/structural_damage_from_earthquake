@@ -98,7 +98,7 @@ The True positive rates for each class is above average. There is yet room to im
 
 ![img](./images/random_forest_important_features.png)
 
-The image above shows the top 15 features that the decision tree deemed important.
+The image above shows the top 15 important features in the Random Forest model.
 
 The buildings that faired best from the earthquake damage were structure that following modern construction methods of using materials like Cement Concrete and steel rebars.
 
