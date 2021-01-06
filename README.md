@@ -71,14 +71,32 @@ The training set (used to train the models on) was then standardized using a Min
 
 ## Model Results
 
-The Decision Tree Model performed best so far. The model complexity was able to correct any instances of underfitting and tuning the hyperparameters managed overfitting issues.
-The model has a Recall Score of 0.70 and an F1 Score of 0.71. Below is an image of the Confusion Matrix.
+The Random Forest Model performed best so far. The model complexity was able to correct any instances of underfitting and tuning the hyperparameters managed overfitting issues.
 
-![img](./images/confusion_matrix_final.png)
+|Model|Recall Score| F1 Score|
+|----|-----------| -------- |
+|baseline Log Reg | 0.6732 |0.594 |
+| Logistic Regression 2 | 0.6622 |0.6734 |
+| Decision Tree Classifier | 0.6799 | 0.6932 |
+| Random Forest Classifier | 0.724 | 0.7263 |
+
+* Estimator Parameters: (bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=20, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=1000,
+                       n_jobs=-1, oob_score=False, random_state=100, verbose=1,
+                       warm_start=False)
+
+
+The model has a Recall Score of 0.72 and an F1 Score of 0.72. Below is an image of the Confusion Matrix.
+
+![img](./images/confusion_matrix_rfc.png)
 
 The True positive rates for each class is above average. There is yet room to improve since the model does not do a very good job of predicting class label 2.
 
-![img](./images/Decision_tree_important_features.png)
+![img](./images/random_forest_important_features.png)
 
 The image above shows the top 15 features that the decision tree deemed important.
 
@@ -86,19 +104,21 @@ The buildings that faired best from the earthquake damage were structure that fo
 
 ## Next Steps
 
-Going forward I would like to try out some more complex models such as SVM, Random Forrest and other Ensemble methods. 
-Although the location of the building is important, I want to see how the models behave if the building locations were removed.
+Since, each incident of an earthquake may be vastly different from the other, how they affect infrastructure may also differ. The next steps would be to work with data on earthquake infrastructure damage from other events. 
+
+Also according to the Berkeley [Lab](https://newscenter.lbl.gov/2019/10/18/better-predicting-earthquake-damage-to-infrastructure-with-faster-computing/) understanding the ground motions of an earthquake is important to modeling the structural response of the building. Such data from an earthquake event of the ground motions may have to be considered when trying to predict structural damage from an earthquake.
 
 ## Recommendations
+
 Based on the Analysis, a strong building that may not face much damage from an earthquake, in one that is built using construction materials that consist of metal and concrete compositions. It is recommended that houses that are made of mud/mortar/stone, mud/stone/brick and older building be upgraded, to prevent loss of life from building damage during an earthquake disaster.
 
 The vulnerable buildings may be built the way they are, because they belong to lower income households. In order to assist these households financially, the government may also have to provide financial support.
 
-The model is only 68% accurate. Investigators may use these models in addition to other tools they already have, or they may have to add an additional confirmation step in their assessment of a building vulnerability to earthquake damage.
+The model is only 72% accurate. Investigators may use these models in addition to other tools they already have, or they may have to add an additional confirmation step in their assessment of a building vulnerability to earthquake damage.
 
 ## For More Information
 
-Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](presentation_eq_building_damage.pdf).
+Please review the full analysis in the [final notebook](predicting_building_damage.ipynb). The slide deck to the presentation for this project can be found [here](Presentation.pdf).
 
 For any additional questions, feel free to email me at **boutlhamu@gmail.com**
 
