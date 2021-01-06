@@ -96,7 +96,7 @@ The model has a Recall Score of 0.72 and an F1 Score of 0.72. Below is an image 
 
 The True positive rates for each class is above average. There is yet room to improve since the model does not do a very good job of predicting class label 2.
 
-![img](./images/random_forest_important_features.png)
+![img](./images/random_forest_important_features.png) 
 
 The image above shows the top 15 important features in the Random Forest model.
 
